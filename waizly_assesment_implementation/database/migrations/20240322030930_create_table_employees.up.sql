@@ -4,5 +4,5 @@ CREATE TABLE employees (
 	job_title varchar(50),
 	salary decimal,
 	department varchar(50),
-	joined_date date not null default current_date
+	joined_date timestamp(0) with time zone DEFAULT CURRENT_TIMESTAMP(6)
 );
