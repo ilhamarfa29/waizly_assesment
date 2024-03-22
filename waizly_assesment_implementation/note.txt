@@ -1,0 +1,16 @@
+Create Migration:
+migrate create -ext sql -dir [directory_file_migrations] [migration_name]
+example : migrate create -ext sql -dir database/migrations create_table_employees
+
+Running Migration Up:
+migrate -database "postgres://[user]:[password]@[host]:[port]/[dbName]?sslmode=disable" -path [directory_file_migrations] up
+example : migrate -database "postgres://postgres:password@localhost:5432/waizly_assesment?sslmode=disable" -path database/migrations up
+
+Create Payload :
+{
+    "employee_name" : "Jonh Wick",
+    "job_title" : "Manager",
+    "salary" : 53000,
+    "department" : "Sales",
+    "joined_date" : "2022-10-08T10:30:00Z" 
+}
